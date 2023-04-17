@@ -67,7 +67,7 @@ def split_files():
         # Scrive in testa ad ogni file l'instestazione: 
         for x in range(split) :
             fn = newpath + "/" + tail.split(".")[0] + ("-Split-%d.csv" %x)
-            out.append(writer(open(fn, "w"), delimiter=',')) 
+            out.append(writer(open(fn, "w", newline=''), delimiter=',')) 
             out[x].writerow(data[0])
 
         # Rimuove l'intestazione:
